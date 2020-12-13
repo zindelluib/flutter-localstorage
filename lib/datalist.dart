@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dataform.dart';
 
 class DataList extends StatefulWidget{
 
@@ -14,6 +15,15 @@ class _DataListState extends State<DataList>{
 			),
 			body:Center(
 				child : Text('Data List')
+			),
+			floatingActionButton: FloatingActionButton(
+				child : Icon(Icons.add),
+				onPressed: (){
+					Navigator.push(
+						context,
+						MaterialPageRoute(builder:(context) => DataForm())
+					);
+				}
 			)
 		);
 	}
